@@ -183,18 +183,20 @@
  * 
  * 
  * # PSEUDO CLASSES 
- * >>> :hover
+ * >>> [:hover]
  * [.class-name:hover{}]
  * - which adds extra classes in certain situation >> in case of pseudo class ":hover" >> adding extra classes while hovering
  * 
- * >>> :active
+ * >>> [:active]
  * - extra styles under this PSEUDO class.. will be applied only when button is in active state [that is when button is clicked]
  * 
  * # OPACITY
+ * >>> [opacity: 0 to 1]
  * - fades out the styles of an element 
  * [which is making respective element completely invisible]
  * 
- * - value ranges from (0 - 1) >> also takes in decimal values 0.1, 0.2 etc.,
+ * - value ranges from (0 - 1) >> also takes in decimal values 0.1, 0.2 etc., upto 1
+ *    - opacity: 1 which makes element completely invisible
  * ex: 
 .subscribe-btn:hover {
   opacity: 0.8;
@@ -206,7 +208,7 @@
  * 
  * 
  * # TRANSITION
- * [property: transition]
+ * >>> [property: transition]
  * 
  * - switching to other styles from active styles >> we need transition
  * 
@@ -215,7 +217,7 @@
  *    - 2: how long this transition shall take [time in seconds]
  * 
  * $ NOTE
- * - this property has to be added on parent styles but not on
+ * - this property has to be added on parent styles but not on pseudo styles
  * 
  * ex:
 .subscribe-btn {                        // - [parent style]
@@ -238,15 +240,11 @@
  * 
  * ex:
 .join-btn {
-  background-color: white;
   border-width: 1px;
   border-style: solid;
   border-color: rgb(80, 80, 255);
   border-radius: 2px;
-  height: 37px;
-  width: 60px;
   color: rgb(80, 80, 255);
-  cursor: pointer;
   transition: background-color 1s, color 1s;    // - comma separated values
 }
 
@@ -261,7 +259,7 @@
  * 
  * 
  * # SHADOWS
- * [property: box-shadow]
+ * >>> [property: box-shadow]
  * 
  * - this adds a shadow to an element 
  * - takes in 4 values: [horizontal-pos, vertical-pos, blur-value, color-of-shadow] 
@@ -269,18 +267,20 @@
  * ex:
 box-shadow: 10px 10px 10px black;
  *            |     |     |     |
- *    horizontal    |     blur  |    
- *                vertical      color of the shadow
+ *    horizontal    |   blur    |    
+ *              vertical      color of the shadow
  * 
  * ? create more realistic shadow
  * ---
  * - they are usually darker shade 
  * - to create that.. we need new way of measuring colors... so use "rgba()"
  * 
- * >>> rgba()
+ * ? new way of making colors
+ * ---
+ * >>> [rgba()]
  * [red-green-blue-opacity]
  * - as shadows are darker that is they are black.. we have to use rgba(0, 0, 0, 0.15) 
- * - rgba(0, 0, 0, 0.15) is commonly used value to create realistic shadows
+ *    - rgba(0, 0, 0, 0.15) is commonly used value to create realistic shadows
  * 
  * ex:
 .tweet-btn {
@@ -325,7 +325,7 @@ box-shadow: 10px 10px 10px black;
  * 
  * # 2-part: PADDING
  * - this allows us to add spacing inside of an element >> which is around the text
- * -  which replaces the height and width styling properties of an element 
+ * - which replaces the height and width styling properties of an element 
  * 
  * $ NOTE
  * - with height and width properties.. if extra text is added.. that text will be over-flown out of the border 
@@ -336,9 +336,99 @@ box-shadow: 10px 10px 10px black;
  * ex: 
  *    padding-top || padding-bottom || padding-left || padding-right
  * else
- *    padding: 10px         10px   
+ *    padding: 10px           10px   
  *              |               \
- *  covers top and bottom!      covers left and right!
+ *  covers: top and bottom!     covers: left and right!
+ * 
+ * $ TIP
+ * - by default >> every thing inside a browser aligns elements based on text
+ *    - so to overwrite this >> we have to use // >>> [vertical-align: top] 
+ * but this has to be done on every element separately!
+ * 
+ * $ NOTE
+ * - every element has spacing on outside called "MARGIN"
+ *    - and space inside around the "CONTENT" is called "PADDING"
+ *        - between MARGIN and PADDING is called "BORDER"
+ * 
+ * CSS BOX MODEL: MARGIN + BORDER + PADDING + CONTENT
+ *    - these properties determine how much space an element takes up inside a webpage
+ * 
+ * ! 5. Text styles
+ * -----------------
+ * 
+ * * CSS Specificity
+ * 
+ * ex:
+p {
+  font-family: Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.status {
+  font-size: 14px;
+  color: rgb(96, 96, 96);
+  margin-bottom: 20px;
+}
+ * 
+ * - in above example, margin-bottom is set to zero initially
+ *    - after that it has changed to 20px [inside class selector]
+ * 
+ * - even if margin-bottom is set to 20px before it is set to 0px 
+ *    - the resultant margin-bottom's value will be 20px only!
+ * 
+ * ? why this is happening 
+ * ---
+ * - cause of CSS specificity.. if we have multiple CSS-style-values for same CSS-property
+ *    - then browser follows a PRIORITY 
+ * [cause of this margin-bottom: 20px has more priority than margin-bottom: 0px]
+ * 
+ * ? how can browsers determine PRIORITY
+ * ---
+ * - selector which is more specific has higher priority
+ * 
+ * - in above example "p" and ".status" >> ".status" is more specific than "p"
+ *    - that's why margin-bottom is set to 20px
+ * 
+ * >>> therefore CSS-class-selector > element-name-selector [in specificity]
+ * 
+ * ! 6. The HTML Structure
+ * ------------------------
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
  * 
  * 
  * 
