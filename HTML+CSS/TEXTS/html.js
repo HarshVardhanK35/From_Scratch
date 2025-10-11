@@ -220,22 +220,65 @@
  *          |
  *          when styles.css is inside "level-1" folder [here HTML file and styles.css are not in same folder / not beside each other]
  * 
+ * ! 7. Images and Text Boxes
+ * ---------------------------
  * 
+ * [input and img >> both are void tags]
  * 
+ * >>> [image tag: <img>]
+ * - to load images on to a webpage.. use <img>
  * 
+ * - this takes attributes 
+ *    - 1. "src" (source:         to provide links / paths to images)
+ *    - 2. "alt" (alternate text: this helps for screen readers >> if no image is loaded.. screen readers read out the text in it!)
  * 
+ * >>> [text-inputs: <input>]
+ * - create an input text box.. use <input>
+ *    
+ * - this takes
+ *    - 1. type:        values are [text / checkbox]
+ *    - 2. placeholder: tells users what to enter inside that textbox!
  * 
+ * ! 8. CSS display property
+ * --------------------------
  * 
+ * ex:
+<body>
+  <img class="thumbnail" src="./thumbnails/thumbnail-01.webp">
+  <input class="search-bar" type="text" placeholder="Search">
+
+  <p>Talking Tech and AI with Google CEO Sundar Pichai!</p>
+  <p>Marques Brownlee</p>
+  <p>3.4M views &#183; 6 months ago</p>
+</body>
  * 
+ * $ OBSERVATION
+ * - image and input are placed BESIDE each other >> which is a default behavior 
+ * - but paragraphs are ON each other
  * 
+ * $ REASON:
+ * - DUE to display property in CSS
  * 
+ * >>> HTML: types of elements
  * 
+ * # 1. Block element ***
+ *    - takes an entire line in HTML
+ *    ex: paragraphs etc., 
  * 
+ * # 2. Inline-Block element ***
+ *    - takes as much space as it needs [does not take an entire line]
+ *    ex: image and input etc.,
  * 
+ * [cause] >>> these appear in same line
  * 
+ * # 3. Inline element
+ *    - appear within a line of text 
+ *    - these are text elements 
+ *    ex: <strong></strong> as this appears inside a line of text!
  * 
- * 
- * 
+ * $ NOTE
+ * - most importantly: block and inline-block elements 
+ *    - these determine >> how these elements are displayed on a webpage (BESIDE EACH OTHER) or (ABOVE AND BELOW) 
  * 
  * 
  * 

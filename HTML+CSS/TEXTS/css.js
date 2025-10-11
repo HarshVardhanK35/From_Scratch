@@ -395,33 +395,97 @@ p {
  * ! 6. The HTML Structure
  * ------------------------
  * 
+ * ! 7. Images and Text Boxes
+ * ---------------------------
+ * 
+ * ? how to style images 
+ * ---
+ * $ OBSERVATIONS
+ * - when we add width.. image's height also adjusts automatically according to the original image dimensions
+ * 
+ * - if we wanted an images to set inside 300 X 300 area
+ * 
+ * ex:
+.img {
+ width: 300px;
+ height: 300px;
+}
  * 
  * 
+ * [then image would be stretched out! (if image's real dimensions are not 300 X 300)]
+ * ? PROBLEM >> image lose it's dimensions if it does not match 300 X 300 
+ * ---
+ * $ SOLUTION
+ * - images has it's own properties [specific to image-tag]
+ *    - "object-fit" and "object-position"
+ * 
+ * >>> [object-fit]
+ * # 1. value-1 >> cover
+ *    - "covers" image into 300 X 300 area and image does not lose it's shape 
+ *    - sets middle / center of the image inside 300 X 300 area [mid / center area of the image is focussed]
+ *        - this focussed area can be changes using: "object-position"
+ * 
+ * # 2. value-2 >> contain
+ *    - image shrinks inside width X height area 
+ *    - this correctly fits inside the given (width and height) area
+ * 
+ * >>> [object-position]
+ * - object-fit: cover >> sets image to middle / center position by default 
+ * - so with object-position property we can change the position of the image in [width X height] area
+ *    - values: top, bottom, left and right
+ *    - shows left and right parts of the images 
+ * [cause image did not fit into space (300 X 300) correctly]
+ * 
+ * ! 8. CSS display property
+ * --------------------------
+ * >>> display: (a CSS property) 
+ * VALUES: block and inline-block 
+ * 
+ * ? how to target multiple classes inside CSS 
+ * ---
+ * [if we want to apply same properties to different classes]
+ *    - then separate two or more classes into different with comma[,] and apply same CSS styles
+ * 
+ * ex:
+ * ---
+<body>
+  <img class="thumbnail" src="./thumbnails/thumbnail-01.webp">
+  <input class="search-bar" type="text" placeholder="Search">
+
+  <p>Talking Tech and AI with Google CEO Sundar Pichai!</p>
+  <p class="video-autor">Marques Brownlee</p>
+  <p class="video-stats">3.4M views &#183; 6 months ago</p>
+</body>
  * 
  * 
+ * >>> block => inline-block
+ * ---
+ * - for above HTML.. paragraphs are block elements
+ *    - to change them use "display" CSS property
  * 
+<style>
+  .video-author,
+  .video-stats {
+    display: inline-block;
+  }
+</style>
  * 
+ * - then these are displayed beside each other (on same line)!
  * 
+ * >>> inline-block => block
+ * ---
+ * - in the above example, img and input-text are inline-block elements
  * 
+.thumbnail {
+  display: block;
+  width: 300px;
+}
+
+.search-bar {
+  display: block;
+}
  * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+ * - this put img and input on different lines 
  * 
  * 
  * 
