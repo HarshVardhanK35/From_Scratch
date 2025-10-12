@@ -280,6 +280,38 @@
  * - most importantly: block and inline-block elements 
  *    - these determine >> how these elements are displayed on a webpage (BESIDE EACH OTHER) or (ABOVE AND BELOW) 
  * 
+ * ! 9. The Div element
+ * ---------------------
+ * 
+ * >>> div = division [simply a BOX]
+ * [a block element >> as this takes up the entire line]
+ * 
+ * ? WHY div is so useful
+ * ---
+ * - <div> can contain other elements inside it!
+ * - acts as a container 
+ *    - CONTAINER that groups every element and lay them on a webpage!
+ * 
+ * $ SOLUTION
+ * - div is perfect solution for complex websites!
+ * 
+ * ex:
+ * ---
+  <div>
+    <input class="search-bar" type="text" placeholder="Search">
+    <img class="thumbnail" src="./thumbnails/thumbnail-01.webp" alt="thumbnail-01">
+
+    <p>Talking Tech and AI with Google CEO Sundar Pichai!</p>
+    <p class="video-autor">Marques Brownlee</p>
+    <p class="video-stats">3.4M views &#183; 6 months ago</p>
+  </div>
+ * 
+ * 
+ * - everything inside <div> now restricted to the styles we apply for that "div" 
+ * 
+ * 
+ * 
+ * 
  * 
  * 
  * 

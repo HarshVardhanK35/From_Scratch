@@ -488,7 +488,8 @@ p {
  * - this put img and input on different lines 
  * 
  * 
- * 
+ * ! 9. The Div element
+ * ---------------------
  * 
  * 
  * 
