@@ -263,10 +263,12 @@
  * 
  * # 1. Block element ***
  *    - takes an entire line in HTML
+ *    - with this.. elements appear in a row OR "horizontally parallel" [=]
  *    ex: paragraphs etc., 
  * 
  * # 2. Inline-Block element ***
  *    - takes as much space as it needs [does not take an entire line]
+ *    - these make elements appear in columns OR "vertically parallel" [| |]
  *    ex: image and input etc.,
  * 
  * [cause] >>> these appear in same line
@@ -309,12 +311,30 @@
  * 
  * - everything inside <div> now restricted to the styles we apply for that "div" 
  * 
+ * ! 10. Nested layouts technique
+ * -------------------------------
+ * * * *
+ * 
+ * [there are two types of layouts]
+ * # 1. Vertical layout
+ * # 2. Horizontal layout
+ * 
+ * - every webpage can be broken down into series of layouts [under nested layouts]
+ *    - and every webpage is a combination of horizontal and vertical layouts!
+ * 
+ * $ NOTE
+ * - images overflow in HTML! 
+ * - if loaded fonts from google inside head-tag does not work.. then backup fonts work
+ * ex: 
+body {
+  font-family: "Roboto", Arial;
+}                /         \
+ *        loaded font      back-up fonts
  * 
  * 
  * 
- * 
- * 
- * 
+ * ? process of creating nested layouts
+ * ---
  * 
  * 
  * 

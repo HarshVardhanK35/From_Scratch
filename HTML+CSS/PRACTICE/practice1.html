@@ -3,11 +3,15 @@
 
 <head>
   <title>Practice - 1</title>
-  <link rel="stylesheet" href="">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
   <style>
     body {
-      display: inline-block;
-      font-family: Arial;
+      font-family: Roboto;
     }
   </style>
 </head>
@@ -117,7 +121,6 @@
       font-family: Arial;
       margin-top: 10px;
       margin-left: 10px;
-      /* border: 1px solid black; */
       border: none;
       border-radius: 5px;
       box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
@@ -141,7 +144,6 @@
       height: 75px;
       object-fit: cover;
       border-radius: 38px;
-      /* border: 1px solid black; */
       cursor: pointer;
     }
 
@@ -191,7 +193,6 @@
       margin-top: 10px;
       margin-left: 15PX;
       border: none;
-      /* border: 1px solid black; */
       box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
 
     }
@@ -258,69 +259,148 @@
   <!-- ---------------- practice-18 ---------------- -->
 
   <style>
-    .google {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .twit-nav-1 {
       width: 590px;
-      height: 360px;
-      margin: 0;
-      border: none;
-      border: 1px solid black;
+      height: 90px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .ggl-logo {
-      margin-top: 10px;
-      cursor: pointer;
-      width: 250px;
-      height: 100px;
-      /* border: 1px solid black; */
+    .prof-img {
+      display: inline-block;
+      margin: 5px 10px;
+      border-radius: 50%;
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+    }
+
+    .twit-prof-img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .prof-details {
+      display: inline-block;
+      vertical-align: top;
+      margin: 5px;
+      width: 100px;
+      height: 80px;
+    }
+
+    .prof-name {
+      margin-top: 7px;
+      font-weight: bold;
       margin-bottom: 0px;
-
     }
 
-    .ggl-inp {
+    .prof-desc,
+    .prof-stats {
       margin-top: 5px;
-      border: none;
-      border-radius: 25px;
-      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.35);
-
-      width: 300px;
-      padding: 10px;
-      font-size: 16px;
+      margin-bottom: 0px;
     }
 
-    .ggl-btns {
-      margin-top: 30px;
+    .twit-fol-btn {
+      display: inline-block;
+      vertical-align: top;
+      margin: 25px 10px;
+      width: 100px;
+      height: 40px;
     }
 
-    .ggl-btn1,
-    .ggl-btn2 {
-      padding: 10px 15px;
+    .fol-btn {
+      background-color: rgb(85, 165, 255);
       border: none;
+      border-radius: 5px;
+      padding: 0;
+      font-size: 18px;
+      font-weight: bold;
+      width: 100%;
+      height: 100%;
+      color: rgb(255, 255, 255);
 
     }
   </style>
 
-  <div class="google">
-    <div>
-      <img class="ggl-logo" src="./images/google.png" alt="Google logo">
+  <!-- <div class="twit-nav-1">
+    <div class="profile">
+      <div class="prof-img">
+        <img class="twit-prof-img" src="./images/dog-01.jpg" alt="dog-image">
+      </div>
+      <div class="prof-details">
+        <p class="prof-name">Oliver</p>
+        <p class="prof-desc">The dog</p>
+        <p class="prof-stats">Popular</p>
+      </div>
     </div>
-    <div>
-      <input class="ggl-inp" type="text" placeholder="Search Google or type a URL ">
+    <div class="twit-fol-btn">
+      <button class="fol-btn">Follow</button>
     </div>
-    <div class="ggl-btns">
-      <button class="ggl-btn1">Google Search</button>
-      <button class="ggl-btn2">I'm Feeling Lucky</button>
-    </div>
-  </div>
-
-  <!-- ---------------- practice-19 ---------------- -->
-
+  </div> -->
 
   <!-- ---------------- practice-20 ---------------- -->
 
+  <style>
+    .yt-layout {
+      width: 596px;
+      height: 150px;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .vid-img {
+      width: 270px;
+      height: 100%;
+    }
+
+    .img-part {
+      width: 100%;
+      height: 100%;
+    }
+
+    .vid-details {
+      margin-left: 25px;
+      width: 275px;
+      height: 100%;
+
+    }
+
+    .vid-tit {
+      margin-top: 0px;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 24px;
+    }
+
+    .chan-tit {
+      color: rgb(96, 96, 96);
+      margin-bottom: 0px;
+
+    }
+
+    .vid-stat {
+      margin-top: 5px;
+      color: rgb(96, 96, 96);
+    }
+  </style>
+
+  <!-- <div class="yt-layout">
+    <div class="vid-img">
+      <img class="img-part" src="../thumbnails/thumbnail-01.webp" alt="video-image">
+    </div>
+
+    <div class="vid-details">
+      <p class="vid-tit">How to compete against CS degrees (as a self-taught dev)</p>
+      <p class="chan-tit">SuperSimpleDev</p>
+      <p class="vid-stat">1.5k views 4 months ago</p>
+    </div>
+  </div> -->
 
   <!-- ---------------- practice-21 ---------------- -->
 
