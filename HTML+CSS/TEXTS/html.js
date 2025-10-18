@@ -331,64 +331,255 @@ body {
 }                /         \
  *        loaded font      back-up fonts
  * 
+ * * CSS styling
+ * - we use CSS property: [display: "inline-block"] with some margins to design layouts on a webpage
+ * 
+ * $ PROBLEMS 
+ * - using this may create problems 
+ * [problem follows..]
+ * 
+ * ex:
+<style>
+  .inline-problem {
+    border: 1px solid black;
+    width: 450px;               // # 1. this div's total width is 450px
+    height: 250px;
+  }
+
+  .inline-img {
+    width: 50%;                   // # 1. here img has to acquire 50% [and planned to give another 50% for text]
+    vertical-align: top;
+    display: inline-block;
+    border: 1px solid black;
+    height: 25%;      // # 2. when this was given only 25% ...  
+  }
+
+  .inline-text {
+    display: inline-block;
+    width: 45%;               // # 1. if we provide 50% here! then there are problems
+    height: 100%;
+  }
+</style>
+
+<div class="inline-problem">
+  <div class="inline-img">
+    <img class="in-im" src="" alt="dog-image">
+  </div>
+
+  <div class="inline-text">
+    <p class="in-text">Hi, this is inline-block problem</p>
+    <p class="in-text">You may have noticed this!</p>
+  </div>
+</div>
  * 
  * 
- * ? process of creating nested layouts
+ * ! 11. CSS Grid
+ * ---------------
+ * 
+ * ? INLINE - problem
+ * ---
+ * # 1. alignment problems ↴ 
+ * $ NOTE:
+ * - our plan was classes [inline-img and inline-text] has to acquire 50% each in a total "inline-problem" div's width: 450px
+ *    - but it has failed 
+ * 
+ * - if we given 50% to div: inline-img and remaining 50% to div: inline-text.. this cause inline-text div to go below the image forcefully
+ *    - observed that text is not aligning and adjusting correctly into 50% space that was provided
+ * 
+ * $ SOLUTION
+ * - so in above example we have given only 45% [but we wanted to provide 50% of total width to each of the divs]
+ * 
+ * # 2. vertical alignment problem ↴
+ * $ NOTE:
+ * - when img-div's height has given only 25% and wanted to align the text that was on the left to align according to the img..
+ *    - we did not get correct alignment correctly with this!
+ * 
+ * 
+ * 
+ * >>> A GRAND SOLUTION
+ * * * * CSS GRID * * *
+ * [CSS-technique which helps us to create perfectly aligned horizontal layouts]
+ * 
+ * - so created an HTML file to learn GRID!
+ * 
+ * [before that..]
+ * $ NOTE:
+ * - we learned two ways of writing CSS 
+ *    # 1. using style element [<style></style>]        >>> internal styling
+ *    # 2. using external CSS style file [css.styles]   >>> external styling
+ * 
+ * [new of way of writing CSS]
+ * >>> 3. INLINE styles
+ * - writing CSS inside HTML opening-tags with help of "style" attribute!
+ * - this makes HTML hard to read.. so we put into another file in REAL WORLD!
+ * ex: 
+ * <div style="background-color: aqua;">div-1</div>
+ * 
+ * * WHAT is a GRID?
+ * - a layout which has ROWS and COLUMNS
+ *    - it is always ROWS X COLUMNS
+ * 
+ * the HTML file we created.. 
+ *    - has two divs inside a div
+ * ex:
+<div>
+  <div style="background-color: aqua;">div-1</div>
+  <div></div>
+</div>
+ * 
+ * 
+ * [follow above example..]
+ * * GRID preparation
+ * - to make a GRID.. we have to style outer DIV
+ * 
+ * ? to prepare a GRID.. follow two steps
+ * ---
+ * # 1. make display set to grid
+ * # 2. set >> grid-template-columns to some length
+ * 
+ * [code]
+ * ------
+<div style="display: grid; grid-template-columns: 100px 100px;">
+  <div style="background-color: aqua;">DIV 1</div>
+  <div style="background-color: bisque;">DIV 2</div>
+</div>
+ * 
+ * 
+ * $ OBSERVATIONS
+ * >>> A. characteristics and benefits of grid
+ * - 1. divs are supposed to take up the entire line [cause divs are block elements]
+ *    - but with GRID >>> divs inside grid are placed into the grid and takes up only into given dimensions instead [ex: 100px] 
+ * 
+ * - 2. there is no space between above two divs
+ *    - unlike with display: inline-block!
+ * 
+ * - 3. vertical aligns
+ *    - when we add text / image / other element inside one of the above divs
+ *        - that makes another div to perfectly align with other!
+ * 
+ * >>> B. more about "grid-template-columns" property
+ * - this takes as many number of values.. as we wanted!
+ * ex:
+ * grid-template-columns: 100px 100px 200px  
+ *                        /       |       \
+ *                    col-1     col-2     col-3
+ * [so]
+ *    - number of values determine.. number of columns
+ *    - value itself determines the width of each column
+ * 
+ * >>> C. AUTOMATIC creation of rows
+ * ex: 
+ * main-div ↴
+ * grid-template-columns: 100px 200px
+ * 
+<div style="display: grid; grid-template-columns: 100px 200px ">    // - [1 row and 2 columns]
+  <div style="background-color: aqua;">100px</div>
+  <div style="background-color: bisque;">200px</div>
+
+  [// - but we have more divs here!]
+  <div style="background-color: bisque;">DIV 1</div>  
+  <div style="background-color: aqua;">DIV 2</div>    
+</div>
+ * 
+ * - with this above example.. and two divs.. which creates a 1ROW X 2COLUMNS grid
+ *    - but what if we added another div to main [then we have more elements than the columns in >> (grid-template-columns: 100px 200px)]
+ *        - this creates an automatic row!
+ * 
+ * - Therefore.. if we have more elements than specified dimensions inside (grid-template-columns: 100px 200px)
+ *    - then it creates a next row 
+ * 
+ * >>> D. more on "grid-template-columns" and it's values
+ * - values: 1fr
+ *    - fr: free-space
+ *  
+ * - a special value for grid.. IT TAKES REMAINING AMOUNT OF SPACE ON GRID 
+ * - CHARACTERISTICS: when we resize the webpage it will takes the space available.. 
+ * 
+ * ex:
+<div style="display: grid; grid-template-columns: 100px 1fr 2fr; margin-bottom: 30px;">
+  <div style="background-color: aqua;">100px</div>
+  <div style="background-color: bisque;">1fr</div>
+  <div style="background-color: aqua;">2fr</div>
+</div>
+ * 
+ * - 1fr 2fr takes takes width of webpage in ratio >> 1:2
+ *    - div with 1fr takes upto 1/3 rd of remaining space   |
+ *    - div with 2fr takes upto 2/3 rd of remaining space   | .. ratio >> 1:2 >> 1+2 = 3
+ * [suppose 1fr-div takes 100px then 2fr-div takes 200px of webpage >> totally 300px]
+ * 
+ * * GRID gaps
+ * - gaps between columns use.. [column-gap: 20px]
+ * - gaps between rows use..    [rows-gap: 40px]
+ * 
+ * 
+ * ! 12. FlexBox
+ * --------------
+ * [another way to design layouts]
+ * * * * FLEX-BOX * * *
+ * 
+ * - similar to CSS grid
+ * (but it is more flexible)
+ * 
+ * ? in this lecture.. GRID and FLEX-BOX differences and similarities 
  * ---
  * 
+ * - similar to grid.. flexbox also requires outer-div-container
+ *    - that outer-div-container will be the flexbox for internal divs
+ * 
+ * ? HOW to turn outer-div-container into a flexbox
+ * ---
+ * - 1. set the display property!     >> with value: "flex"
+ * - 2. set flex-direction property   >> with value: "row"
+ * 
+ * - this aligns elements horizontally >> these elements behave like "INLINE-BLOCK" elements 
+ * 
+ * ? differences between FLEX and GRID
+ * ---
+ * - 1. when we add text to any element.. 
+ *    - if it "GRID" the text will be added on to the next line
+ *    - if it "FLEX" the text adds to the same line!
+ * 
+ * - 2. making a div element inside a flex-box will.. 
+ *    - align the other div element also vertically align 
+ * 
+ * - 3. flex defined elements take their length / width along with them
+ *    - but not grid defined elements 
+ * 
+ * - GRID = rigid layout
+ * - FLEX = flexible layout
+ * 
+ * $ NOTE
+ * - to make a div u to occupy remaining complete space on a webpage (under a flex-box )
+ * [we used 1fr with grid]
+ *    - but we use flex: 1 to occupy remaining space on a webpage!
+ * 
+ * ? SIMILARITIES
+ * ---
+ * - 1. similar to "grid-fr" || "flex: 1" also takes up remaining space of the complete webpage!
+ * 
+ * ? different properties and values used for flex-box 
+ * ---
+ * - "justify-content": helps in alignment of divs HORIZONTALLY
+ * - values: 
+ *    - 1. end / right (align items to right-hand side in main flexbox) 
+ *    - 2. start / left (align items to left-hand side in main flexbox)
+ *    - 3. center (aligned in center)
+ *    - 4. space-between (provides an equal amount of space between each element)
+ * 
+ * - "align-items": helps in alignment of divs VERTICALLY
+ * - values: 
+ *    - 1. stretch: elements stretch up to occupy vertical space
+ *    - 2. start: elements placed starting from top occupying space that was given vertically
+ *    - 3. end: vice-versa to "start"
+ *    - 4. center: elements are placed at center vertically!
  * 
  * 
+ * ? which one to use (GRID / FLEX)?
+ * ---
+ * - when we are focussed on content size first and layout does not matter then it will be FLEXBOX
+ *    - with which content will be spread out evenly in horizontal space!
  * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+ * - when we need a GRID.. we use CSS-GRID 
  * 
  * 
  * 

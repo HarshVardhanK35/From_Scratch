@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>YouTube - Demo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/general.css">
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/video.css">
+</head>
+
+<body>
+
+  <style>
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      height: 55px;
+    }
+
+    .left-sec {
+      border: 1px solid black;
+      background-color: aqua;
+
+      width: 150px;
+
+    }
+
+    .middle-sec {
+      background-color: bisque;
+      flex: 1;
+
+      margin-left: 75px;
+      margin-right: 30px;
+
+      max-width: 500px;
+    }
+
+    .right-sec {
+
+      border: 1px solid black;
+      background-color: aqua;
+
+      width: 200px;
+    }
+  </style>
+
+  <div class="header">
+    <div class="left-sec">LEFT SECTION</div>
+    <div class="middle-sec">
+      <input class="search-bar" type="text" placeholder="Search">
+    </div>
+    <div class="right-sec">RIGHT SECTION</div>
+
+  </div>
+
+  <div class="yt-main-grid">
+
+    <div class="yt-main">
+      <div class="vid-thumb">
+        <img class="thumb-img" src="./thumbnails/thumbnail-01.webp" alt="thumbnail-01">
+      </div>
+
+      <div class="vid-info-grid">
+        <div class="vid-prof">
+          <img class="vid-prof-img" src="./profiles/channel-01.jpeg" alt="profile-01">
+        </div>
+        <div class="vid-desc">
+          <p class="vid-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+          <p class="vid-author">Marques Brownlee</p>
+          <p class="vid-stats">3.4M views &#183; 6 months ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="yt-main">
+      <div class="vid-thumb">
+        <img class="thumb-img" src="./thumbnails/thumbnail-02.webp" alt="thumbnail-01">
+      </div>
+
+      <div class="vid-info-grid">
+        <div class="vid-prof">
+          <img class="vid-prof-img" src="./profiles/channel-02.jpeg" alt="profile-01">
+        </div>
+        <div class="vid-desc">
+          <p class="vid-title">Try Not To Laugh Challenge #9</p>
+          <p class="vid-author">Markiplier</p>
+          <p class="vid-stats">19M views &#183; 4 months ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="yt-main">
+      <div class="vid-thumb">
+        <img class="thumb-img" src="./thumbnails/thumbnail-03.webp" alt="thumbnail-01">
+      </div>
+
+      <div class="vid-info-grid">
+        <div class="vid-prof">
+          <img class="vid-prof-img" src="./profiles/channel-03.jpeg" alt="profile-01">
+        </div>
+        <div class="vid-desc">
+          <p class="vid-title">Crazy Tik Toks Taken Moments Before DISASTER</p>
+          <p class="vid-author">SSSniperWolf</p>
+          <p class="vid-stats">12M views &#183; 1 year ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="yt-main">
+      <div class="vid-thumb">
+        <img class="thumb-img" src="./thumbnails/thumbnail-04.webp" alt="thumbnail-01">
+      </div>
+
+      <div class="vid-info-grid">
+        <div class="vid-prof">
+          <img class="vid-prof-img" src="./profiles/channel-04.jpeg" alt="profile-01">
+        </div>
+        <div class="vid-desc">
+          <p class="vid-title">The Simplest Math Problem No One Can Solve - Collatz Conjecture</p>
+          <p class="vid-author">Veritasium</p>
+          <p class="vid-stats">18M views &#183; 4 months ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="yt-main">
+      <div class="vid-thumb">
+        <img class="thumb-img" src="./thumbnails/thumbnail-05.webp" alt="thumbnail-01">
+      </div>
+
+      <div class="vid-info-grid">
+        <div class="vid-prof">
+          <img class="vid-prof-img" src="./profiles/channel-05.jpeg" alt="profile-01">
+        </div>
+        <div class="vid-desc">
+          <p class="vid-title">Kadane's Algorithm to Maximum Sum Subarray Problem</p>
+          <p class="vid-author">CS Dojo</p>
+          <p class="vid-stats">519K views &#183; 5 years ago</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="yt-main">
+      <div class="vid-thumb">
+        <img class="thumb-img" src="./thumbnails/thumbnail-06.webp" alt="thumbnail-01">
+      </div>
+
+      <div class="vid-info-grid">
+        <div class="vid-prof">
+          <img class="vid-prof-img" src="./profiles/channel-06.jpeg" alt="profile-01">
+        </div>
+        <div class="vid-desc">
+          <p class="vid-title">Anything You Can Fit In The Circle I’ll Pay For</p>
+          <p class="vid-author">MrBeast</p>
+          <p class="vid-stats">141M views &#183; 1 year ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="yt-main">
+      <div class="vid-thumb">
+        <img class="thumb-img" src="./thumbnails/thumbnail-07.webp" alt="thumbnail-01">
+      </div>
+
+      <div class="vid-info-grid">
+        <div class="vid-prof">
+          <img class="vid-prof-img" src="./profiles/channel-07.jpeg" alt="profile-01">
+        </div>
+        <div class="vid-desc">Why Planes Don't Fly Over Tibet</p>
+          <p class="vid-author">RealLifeLore</p>
+          <p class="vid-stats">6.6M views &#183; 1 year ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="yt-main">
+      <div class="vid-thumb">
+        <img class="thumb-img" src="./thumbnails/thumbnail-08.webp" alt="thumbnail-01">
+      </div>
+
+      <div class="vid-info-grid">
+        <div class="vid-prof">
+          <img class="vid-prof-img" src="./profiles/channel-08.jpeg" alt="profile-01">
+        </div>
+        <div class="vid-desc">
+          <p class="vid-title">Inside The World's Biggest Passenger Plane</p>
+          <p class="vid-author">Tech Vision</p>
+          <p class="vid-stats">3.7M views &#183; 10 months ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="yt-main">
+      <div class="vid-thumb">
+        <img class="thumb-img" src="./thumbnails/thumbnail-09.webp" alt="thumbnail-01">
+      </div>
+
+      <div class="vid-info-grid">
+        <div class="vid-prof">
+          <img class="vid-prof-img" src="./profiles/channel-09.jpeg" alt="profile-01">
+        </div>
+        <div class="vid-desc">
+          <p class="vid-title">The SECRET to Super Human STRENGTH</p>
+          <p class="vid-author">ThenX</p>
+          <p class="vid-stats">20M views &#183; 3 years ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="yt-main">
+      <div class="vid-thumb">
+        <img class="thumb-img" src="./thumbnails/thumbnail-10.webp" alt="thumbnail-01">
+      </div>
+
+      <div class="vid-info-grid">
+        <div class="vid-prof">
+          <img class="vid-prof-img" src="./profiles/channel-10.jpeg" alt="profile-01">
+        </div>
+        <div class="vid-desc">
+          <p class="vid-title">How The World's Largest Cruise Ship Makes 30,000 Meals Every Day</p>
+          <p class="vid-author">Business Insider</p>
+          <p class="vid-stats">14M views &#183; 1 year ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="yt-main">
+      <div class="vid-thumb">
+        <img class="thumb-img" src="./thumbnails/thumbnail-11.webp" alt="thumbnail-01">
+      </div>
+
+      <div class="vid-info-grid">
+        <div class="vid-prof">
+          <img class="vid-prof-img" src="./profiles/channel-11.jpeg" alt="profile-01">
+        </div>
+        <div class="vid-desc">
+          <p class="vid-title">Dubai's Crazy Underwater Train and Other Things #Only in Dubai</p>
+          <p class="vid-author">Destination Tips</p>
+          <p class="vid-stats">3M views &#183; 1 year ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="yt-main">
+      <div class="vid-thumb">
+        <img class="thumb-img" src="./thumbnails/thumbnail-12.webp" alt="thumbnail-01">
+      </div>
+
+      <div class="vid-info-grid">
+        <div class="vid-prof">
+          <img class="vid-prof-img" src="./profiles/channel-12.jpeg" alt="profile-01">
+        </div>
+        <div class="vid-desc">
+          <p class="vid-title">What would happen if you didn’t drink water? - Mia Nacamulli</p>
+          <p class="vid-author">TED-ED</p>
+          <p class="vid-stats">12M views &#183; 5 years ago</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>

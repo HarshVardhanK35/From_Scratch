@@ -491,17 +491,22 @@ p {
  * ! 9. The Div element
  * ---------------------
  * 
- * 
- * 
  * ! 10. Nested layouts technique
  * -------------------------------
  * 
+ * ! 11. CSS Grid
+ * ---------------
  * 
+ * ! 12. FlexBox
+ * --------------
  * 
+ * $ REMEMBER
+ * - usually every body tag in a webpage has margin which is set to 8px on all sides on "DEFAULT"
  * 
- * 
- * 
- * 
+ * ? reset the default styles 
+ * ---
+ * - inside general styles file
+ *    - set body { margin: 0 }
  * 
  * 
  * 

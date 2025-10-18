@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS-Grid</title>
+</head>
+
+<body style="margin-bottom: 1000px;">
+  <style></style>
+
+  <div style="display: grid; grid-template-columns: 100px 200px; margin-bottom: 20px;">
+    <div style="background-color: aqua;">100px</div>
+    <div style="background-color: bisque;">200px</div>
+    <div style="background-color: bisque;">DIV 1</div>
+    <div style="background-color: aqua;">DIV 2</div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 100px 1fr; margin-bottom: 30px;">
+    <div style="background-color: aqua;">100px</div>
+    <div style="background-color: bisque;">1fr</div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 100px 1fr 2fr; margin-bottom: 30px;">
+    <div style="background-color: aqua;">100px</div>
+    <div style="background-color: bisque;">1fr</div>
+    <div style="background-color: aqua;">2fr</div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 20px; row-gap: 40px;">
+    <div style="background-color: aqua; height: 200px">1fr</div>
+    <div style="background-color: bisque; height: 200px">1fr</div>
+    <div style="background-color: aqua; height: 200px">1fr</div>
+    <div style="background-color: bisque; height: 200px">1fr</div>
+    <div style="background-color: aqua; height: 200px">1fr</div>
+    <div style="background-color: bisque; height: 200px">1fr</div>
+  </div>
+
+</body>
+</html>
