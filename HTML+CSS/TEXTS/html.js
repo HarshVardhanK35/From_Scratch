@@ -581,7 +581,7 @@ body {
  * - when we need a GRID.. we use CSS-GRID 
  * 
  * ! 13. Nested Flexbox
- * 
+ * ---------------------
  * $ IMPORTANT
  * - flexbox acts for only components at first level
  * that is.. 
@@ -637,22 +637,83 @@ body {
 }
  * 
  * 
+ * ! 14. CSS Position
+ * -------------------
+ * 
+ * - 1. this helps us to keep header on top of the page.. when we scroll
+ *    - keeps the side bar at it it's position while scrolling!
+ * 
+ * - 2. element on top of other element
+ *    - notification numbers on the notification-icon
+ *    - video length on top of it's thumbnail
+ * 
+ * - 3. CSS position also adds another dimension on to a webpage!
+ * 
+ * * CSS position
+ * -  CSS position is a position property
+ *    - property used: position
+ *    - values used:   static (default), absolute, fixed, relative.
+ * 
+ * >>> static:
+ * - this is a default value for CSS-position
+ * 
+ * >>> fixed:
+ * - this helps in fixing a div at certain position
+ * - after adding this property.. element will float on above a web-page
+ * ex: fixing navbar inside a web-application
+ * 
+ * $ other additional properties
+ * - 1. "top" [val: measurements in pixels etc.,]
+ *    - specifies how far an element is from top of a web-page window
+ * 
+ * - 2. "left" [val: measurements in pixels etc.,]
+ *    - an element that is left from the browser window.. 
+ * 
+ * - similarly "right" and "bottom"
+ * 
+ * $ NOTE:
+ * - spacing an element from all directions from a browser window!
+ * - when we use two different and opposite properties [left and right] then it stretches that element
+ * 
+ * ex:
+ * ? case-1
+ * ---
+ * - when there is a header of 50px height and want 
+ * ex:
+<div style="
+  background-color: black; 
+  color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0px; 
+  left: 0px;
+  right: 0px;
+  height: 50px;   // - "height" is a replacement of "bottom"
+">
+  HEADER
+</div>
+<div style="width: 200px; height: 200px; background-color: aqua;">div-1</div>
+<div style="width: 200px; height: 200px; background-color: bisque;">div-2</div>
  * 
  * 
+ * - when we apply position like properties on an element it makes that element to float on the web-browser
+ *    - so it makes that respective element "transparent"
+ *        - so we have to add background-color: "white"
  * 
+ * - if we do not know exact dimensions for property "bottom"
+ *    - then we could replace it with "height"
+ * ex:
+ * bottom: 0px
+ * - this will make that element fix to the bottom of that web-page / browser!
  * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+ * >>> making a sidebar for a web-page
+ * - left: 
+ *    - 0px >> to start from exact left
+ * - top: 
+ *    - if there is a header.. it starts from height of the header
+ * - right: 
+ *    - here right must be replaced with width
+ * - bottom:
+ *    - 0px >> to fix with exact bottom of the web-page
  * 
  * 
  * 

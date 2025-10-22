@@ -1,4 +1,5 @@
 .yt-main-grid {
+  /* background-color: aqua; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10px;

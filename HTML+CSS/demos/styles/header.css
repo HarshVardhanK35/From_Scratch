@@ -1,9 +1,16 @@
 .header {
+  height: 55px;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
-  height: 55px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(230, 230, 230);
 }
 
 .left-sec {
@@ -16,6 +23,7 @@
 
 .hamburger-menu {
   height: 25px;
+  width: 25px;
   margin-left: 20px;
   margin-right: 20px;
 }
