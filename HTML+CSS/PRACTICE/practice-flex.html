@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flex - Practice</title>
+
+  <style>
+    body {
+      font-family: Arial
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- <style>
+    .div-one {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+    }
+  </style> -->
+
+  <!-- <div class="div-one">
+    <div style="background-color: aqua; width: 200px;">200px</div>
+    <div style="background-color: bisque; width: 75px;">75px</div>
+  </div> -->
+
+
+  <!-- <style>
+    .div-two {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+    }
+  </style> -->
+
+  <!-- <div class="div-two">
+    <div style="background-color: aqua; width: 50px;">item 1</div>
+    <div style="background-color: bisque; flex: 1;">item 2</div>
+    <div style="background-color: aqua; width: 75px;">item 3</div>
+  </div> -->
+
+  <!-- <style>
+    .div-three {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      margin-bottom: 10px;
+      border: 1px solid;
+    }
+  </style> -->
+
+  <!-- <div class="div-three">
+    <div style="background-color: aqua;">item 1</div>
+    <div style="background-color: bisque;">item 2</div>
+    <div style="background-color: aqua;">item 3</div>
+    <div style="background-color: bisque;">item 4</div>
+  </div> -->
+
+  <!-- <style>
+    .div-four {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid;
+      height: 50px;
+    }
+  </style> -->
+
+  <!-- <div class="div-four">
+    <div style="background-color: aqua;">item 1</div>
+    <div style="background-color: bisque;">item 2</div>
+  </div> -->
+
+  <!-- -------------------------- Practice - 1 -------------------------- -->
+
+  <!-- <style>
+    body {
+      font-family: Arial;
+      font-size: 22px;
+    }
+
+    p {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      align-items: center;
+    }
+
+    .notifications {
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+    }
+
+    .home {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 10px 10px;
+    }
+
+    .num-btn {
+      background-color: rgb(35, 125, 230);
+      border: none;
+      border-radius: 18px;
+      padding: 5px 20px;
+      color: rgb(255, 255, 255);
+      font-size: 22px;
+      text-align: center;
+    }
+  </style> -->
+
+  <!-- <div class="notifications">
+    <div class="home">
+      <p class="not-cat">Home</p>
+      <button class="num-btn">14</button>
+    </div>
+
+    <div class="home">
+      <p class="not-cat">Notifications</p>
+      <button class="num-btn">3</button>
+    </div>
+
+    <div class="home">
+      <p class="not-cat">Messages</p>
+      <button class="num-btn">5</button>
+    </div>
+  </div> -->
+
+  <!-- -------------------------- Practice - 2 -------------------------- -->
+
+  <!-- <style>
+    p {
+      font-family: Arial;
+    }
+
+    .follow-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      /* border: 1px solid black; */
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .img {
+      margin-left: 20px;
+      /* border: 1px solid black; */
+      border-radius: 38px;
+      width: 75px;
+      height: 75px;
+      object-fit: cover;
+    }
+
+    .prof-details {
+      margin-left: 20px;
+    }
+
+    .prof-name {
+      margin-top: 15px;
+      margin-bottom: 0px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .prof-categ {
+      margin-top: 5px;
+      margin-bottom: 0px;
+      color: rgb(96, 96, 96);
+      font-size: 22px;
+    }
+
+    .prof-stats {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      color: rgb(96, 96, 96);
+      font-size: 18px;
+    }
+
+    .follow-btn {
+      background-color: rgb(58, 145, 245);
+      margin-right: 20px;
+      border: none;
+      padding: 14px 25px;
+      border-radius: 5px;
+
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      font-size: 24px;
+    }
+  </style> -->
+
+  <!-- <div class="follow-card">
+    <div class="profile">
+      <div>
+        <img class="img" src="./images/dog-01.jpg" alt="dog-image">
+      </div>
+
+      <div class="prof-details">
+        <p class="prof-name">Oliver</p>
+        <p class="prof-categ">the dog</p>
+        <p class="prof-stats">Popular</p>
+      </div>
+    </div>
+
+    <div class="btn-div">
+      <button class="follow-btn">Follow</button>
+    </div>
+  </div>
+
+  <div class="follow-card">
+    <div class="profile">
+      <div>
+        <img class="img" src="./images/dog-02.jpg" alt="dog-image">
+      </div>
+
+      <div class="prof-details">
+        <p class="prof-name">Mimi</p>
+        <p class="prof-categ">Sleepy cat</p>
+        <p class="prof-stats">Popular</p>
+      </div>
+    </div>
+
+    <div class="btn-div">
+      <button class="follow-btn">Follow</button>
+    </div>
+  </div>
+
+  <div class="follow-card">
+    <div class="profile">
+      <div>
+        <img class="img" src="./images/dog-03.jpg" alt="dog-image">
+      </div>
+
+      <div class="prof-details">
+        <p class="prof-name">Rex</p>
+        <p class="prof-categ">Happy Bulldog</p>
+        <p class="prof-stats">Popular</p>
+      </div>
+    </div>
+
+    <div class="btn-div">
+      <button class="follow-btn">Follow</button>
+    </div>
+  </div> -->
+
+
+  <!-- -------------------------- Practice - 3 -------------------------- -->
+
+  <style>
+    /* .navbar {
+      background-color: rgb(175, 115, 245);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .route-div {
+      width: 125px;
+    }
+
+    .route-name {
+      margin: 20px 10px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: rgb(255, 255, 255);
+    }
+
+    .search-div {
+      flex: 1;
+      max-width: 980px
+    }
+
+    .search-bar {
+      border: none;
+      border-radius: 20px;
+      padding: 10px;
+      width: 87%;
+      max-width: 980px;
+    }
+
+    .btn-div {
+      width: 175px;
+    }
+
+    .down-btn {
+      background-color: rgb(175, 115, 245);
+
+      margin-left: 35px;
+      border: none;
+      border: 1px solid rgb(255, 255, 255);
+      border-radius: 3px;
+
+      width: 125px;
+      height: 40px;
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+    } */
+  </style>
+
+  <!-- <div class="navbar">
+    <div class="route-div">
+      <p class="route-name">Home</p>
+    </div>
+    <div class="search-div">
+      <input class="search-bar" type="text" placeholder="Search">
+    </div>
+    <div class="btn-div">
+      <button class="down-btn">Download</button>
+    </div>
+  </div> -->
+
+  <!-- -------------------------- Practice - 4 -------------------------- -->
+
+  <style>
+    /* .main {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .div-1 {
+      background-color: aqua;
+      width: 100px;
+      text-align: center;
+    }
+
+    .text-1 {
+      background-color: black;
+      display: inline-block;
+      color: rgb(255, 255, 255);
+    }
+
+    .div-2 {
+      background-color: bisque;
+      width: 200px;
+    } */
+  </style>
+
+  <!-- <div class="main">
+    <div class="div-1">
+      <p class="text-1">item 1</p>
+    </div>
+    <div class="div-2">
+      <p style="color: bisque;">text-2</p>
+    </div>
+  </div> -->
+
+  <!-- -------------------------- Practice - 5 -------------------------- -->
+
+  <style>
+    /* .main {
+      display: flex;
+
+    }
+
+    .div-1 {
+      background-color: aqua;
+      width: 100px;
+    }
+
+    .div-2 {
+      background-color: bisque;
+      width: 200px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    } */
+  </style>
+
+  <!-- <div class="main">
+    <div class="div-1">
+      <p style="color: aqua;">text-1</p>
+    </div>
+
+    <div class="div-2">
+      <div class="inr-div-1">
+        <div>
+          <p style="margin-bottom: 0; margin-top: 0;">row 1</p>
+        </div>
+        <div>
+          <p style="background-color: black; color: rgb(255, 255, 255); margin-top: 0;">row 2</p>
+        </div>
+      </div>
+      <div class="inr-div-2">
+        <p style="background-color: black; color: rgb(255, 255, 255);">row 2</p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- -------------------------- Practice - 6 -------------------------- -->
+
+  <!-- <style>
+    .main {
+      box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.35);
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .inboxes {
+      margin-left: 15px;
+      color: rgb(96, 96, 96);
+      margin-bottom: 20px;
+    }
+
+    .msg-main {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 10px;
+    }
+
+    .img-div {
+      margin-top: 7px;
+      width: 58px;
+      height: 58px;
+    }
+
+    .img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .msg-box {
+      flex: 1;
+      margin-left: 15px;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .title {
+      margin-top: 0px;
+      margin-bottom: 5px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .slog {
+      margin-top: 0px;
+      margin-bottom: 5px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .act-msg {
+      margin-top: 0px;
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: rgb(96, 96, 96);
+    }
+
+    .time {
+      margin-top: 0px;
+      color: rgb(96, 96, 96);
+    }
+  </style> -->
+
+  <!-- <div class="main">
+    <div class="sec-title">
+      <p class="inboxes">ALL INBOXES</p>
+    </div>
+
+    <div class="msg-main">
+      <div class="img-div">
+        <img class="img" src="./images/dog-01.jpg" alt="dog-image">
+      </div>
+      <div class="msg-box">
+        <div class="msg-title">
+          <p class="title">Chewy Promotions</p>
+        </div>
+        <div class="msg-slog">
+          <p class="slog">Biggest sales of the year!</p>
+        </div>
+        <div class="msg-text">
+          <p class="act-msg">Hey there! We're writing to tell you about our...</p>
+        </div>
+      </div>
+      <div class="msg-time">
+        <p class="time">4:58 PM</p>
+      </div>
+    </div>
+
+
+    <div class="msg-main">
+      <div class="img-div">
+        <img class="img" src="./images/dog-02.jpg" alt="dog-image">
+      </div>
+      <div class="msg-box">
+        <div class="msg-title">
+          <p class="title">Best Buy</p>
+        </div>
+        <div class="msg-slog">
+          <p class="slog">Your Best Buy eReceipt</p>
+        </div>
+        <div class="msg-text">
+          <p class="act-msg">Thank you for shopping at Best Buy, here is...</p>
+        </div>
+      </div>
+      <div class="msg-time">
+        <p class="time">4:58 PM</p>
+      </div>
+    </div>
+
+    <div class="msg-main">
+      <div class="img-div">
+        <img class="img" src="./images/dog-03.jpg" alt="dog-image">
+      </div>
+      <div class="msg-box">
+        <div class="msg-title">
+          <p class="title">Netflix</p>
+        </div>
+        <div class="msg-slog">
+          <p class="slog">Here's what's coming soon on Netflix</p>
+        </div>
+        <div class="msg-text">
+          <p class="act-msg">Brand new movies and shows, old favorites...</p>
+        </div>
+      </div>
+      <div class="msg-time">
+        <p class="time">4:58 PM</p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- -------------------------- Practice - 6 -------------------------- -->
+
+  <!-- <style>
+    .twitter-main {
+      display: flex;
+    }
+
+    .prof-img-div {
+      width: 72Fpx;
+      height: 72px;
+    }
+
+    .prof-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .content-main {
+      margin-left: 18px;
+    }
+
+    .prof-div {
+      display: flex;
+    }
+
+    .prof-name {
+      margin-top: 5px;
+      margin-bottom: 0px;
+      font-size: 16px;
+    }
+
+    .prof-tag {
+      margin-left: 7px;
+      margin-top: 5px;
+      margin-bottom: 0px;
+      font-size: 16px;
+    }
+
+    .link-about {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      width: 450px;
+      line-height: 24px
+    }
+
+    .content-link {
+      display: flex;
+      border-radius: 15px;
+      border: 1px solid rgb(200, 200, 200)
+    }
+
+    .link-img-div {
+      width: 125px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      background-color: rgb(219, 217, 217);
+    }
+
+    .link-div {
+      margin-left: 10px;
+    }
+
+    .youtube {
+      margin-top: 20px;
+      margin-bottom: 0px;
+      font-size: 16px;
+    }
+
+    .link-desc-div {
+      width: 275px;
+    }
+
+    .link-desc {
+      margin-top: 5px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  </style> -->
+
+  <!-- <div class="twitter-main">
+    <div class="prof-img-div">
+      <img class="prof-img" src="./images/dog-03.jpg" alt="Profile-Picture">
+    </div>
+
+    <div class="content-main">
+      <div class="prof-div">
+        <div class="prof-name-div">
+          <p class="prof-name">supersimple.dev</p>
+        </div>
+
+        <div class="prof-tag-div">
+          <p class="prof-tag">@SuperSimpleDev</p>
+        </div>
+      </div>
+
+      <div class="link-about-div">
+        <p class="link-about">What is backend web development? A complete overview. New video is up!</p>
+      </div>
+
+      <div class="content-link">
+        <div class="link-img-div">
+          <img class="link-img" src="" alt="">
+        </div>
+
+        <div class="link-div">
+          <div class="youtube-link">
+            <p class="youtube">youtube.com</p>
+          </div>
+          <div class="link-desc-div">
+            <p class="link-desc">Backend web development - a complete overview (2021)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+</body>
+
+</html>

@@ -529,7 +529,7 @@ body {
  * ? HOW to turn outer-div-container into a flexbox
  * ---
  * - 1. set the display property!     >> with value: "flex"
- * - 2. set flex-direction property   >> with value: "row"
+ * - 2. set flex-direction property   >> with value: "row" / "column"
  * 
  * - this aligns elements horizontally >> these elements behave like "INLINE-BLOCK" elements 
  * 
@@ -573,7 +573,6 @@ body {
  *    - 3. end: vice-versa to "start"
  *    - 4. center: elements are placed at center vertically!
  * 
- * 
  * ? which one to use (GRID / FLEX)?
  * ---
  * - when we are focussed on content size first and layout does not matter then it will be FLEXBOX
@@ -581,15 +580,61 @@ body {
  * 
  * - when we need a GRID.. we use CSS-GRID 
  * 
+ * ! 13. Nested Flexbox
+ * 
+ * $ IMPORTANT
+ * - flexbox acts for only components at first level
+ * that is.. 
+<div>
+  <div class="1st-lvl"> // - flexbox applies here!
+    First Level
+  </div>
+
+  <div class="2nd-lvl"> // - flexbox applies here too!
+    <div>Inner levels</div>
+  </div>            \
+</div>              // - flexbox does not apply on this level!
  * 
  * 
+ * ? PROBLEM
+ * - here flexbox from higher levels does not apply on inner levels 
+ *    - so we have to make the div near to inner div a flex-box
+ * 
+ * ex:
+<div>
+  <div style="display: flex">
+    <div>INNER DIV</div>      // -  to make this div responsive to flexbox.. we have to make parent-div a flexbox!
+  </div>
+</div>
  * 
  * 
+ * ? to target a pseudo-class on an input-element in CSS
+ * ---
+ * ex:
+<input class="search-ele" type="text" placeholder="Search">
+ * 
+ * - to target "placeholder" in CSS while styling
+ * ex:
+.search-ele:: placeholder {
+  ...styles...
+}
  * 
  * 
+ * $ NOTE
+ * # 1. not to shrink 
+ * - whenever screen size gets smaller.. elements inside flexbox starts to shrink!
+ *    - which can be prevented.. and also keeps the same sizes even when screen size has been shrinking! 
  * 
+ * # 2. to shrink
+ * - to shrink we have to use.. width: 0
+ *    - which shrinks an element!
  * 
- * 
+ * >>> [flex-shrink: 0] >> keeps the elements as it is!
+ * ex:
+{
+  display: flex;
+  flex-shrink: 0;
+}
  * 
  * 
  * 
